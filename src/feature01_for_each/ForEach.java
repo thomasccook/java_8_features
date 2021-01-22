@@ -13,9 +13,7 @@ import java.util.function.Consumer;
  */
 public class ForEach {
 
-		
 	public ForEach() {
-		
 		List<Integer> list = this.createList();
 		
 		print("Java 1 - for");
@@ -40,7 +38,6 @@ public class ForEach {
 				print(t);
 			}
 		});		
-		
 	}
 	
 	// A list of numbers
@@ -68,6 +65,5 @@ public class ForEach {
 	public static void main(String[] args) {
 		new ForEach();
 	}
-	
 	
 }
