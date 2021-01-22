@@ -11,9 +11,9 @@ import java.util.function.Consumer;
  * Derived from https://www.journaldev.com/2389/java-8-features-with-examples#iterable-forEach
  * 
  */
-public class ForEach {
+public class A_ForEach {
 
-	public ForEach() {
+	public A_ForEach() {
 		List<Integer> list = this.createList();
 		
 		print("Java 1 - for");
@@ -63,7 +63,61 @@ public class ForEach {
 	
 	// Program begins here
 	public static void main(String[] args) {
-		new ForEach();
+		new A_ForEach();
 	}
 	
 }
+
+
+/* Output
+ 
+Java 1 - for
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Java 2 - Iterator
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Java 8 - forEach - Anonymous Inner Class
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Java 8 - forEach - Concrete Class
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9  
+  
+  
+ */
+
+
+

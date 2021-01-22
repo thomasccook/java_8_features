@@ -5,10 +5,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class Solution {
+public class C_Solution {
 
 	
-	public Solution() {
+	public C_Solution() {
 		
 		List<Person> list = this.createList();
 		
@@ -67,7 +67,7 @@ public class Solution {
 	
 	// Program begins here
 	public static void main(String[] args) {
-		new Solution();
+		new C_Solution();
 	}
 	
 }
