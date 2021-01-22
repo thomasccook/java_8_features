@@ -38,7 +38,6 @@ public class ForEach {
 		print("Java 8 - forEach - Concrete Class");
 		MyConsumer action = new MyConsumer();
 		list.forEach(action);
-		
 	}
 	
 	// Consumer implementation that can be reused
@@ -50,11 +49,11 @@ public class ForEach {
 	
 	// A list of numbers
 	public List<Integer> createList() {
-		List<Integer> myList = new ArrayList<Integer>();
+		List<Integer> list = new ArrayList<Integer>();
 		for(int i=0; i<10; i++) {
-			myList.add(i);
+			list.add(i);
 		}
-		return myList;
+		return list;
 	}		
 	
 	// A more pleasant looking print function

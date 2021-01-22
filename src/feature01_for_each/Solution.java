@@ -37,6 +37,13 @@ public class Solution {
 		});		
 		
 	}
+			
+	// Consumer implementation that can be reused
+	class MyConsumer implements Consumer<Person>{
+		public void accept(Person p) {
+			print(p.getFirstName().substring(0,1) + " " + p.getLastName());
+		}
+	}
 	
 	public List<Person> createList() {
 		List<Person> list = new ArrayList<Person>();
@@ -51,14 +58,7 @@ public class Solution {
 		list.add(new Person("Maximillian","Buck"));
 		list.add(new Person("Leia","Zavala"));
 		return list;
-	}	
-		
-	// Consumer implementation that can be reused
-	class MyConsumer implements Consumer<Person>{
-		public void accept(Person p) {
-			print(p.getFirstName().substring(0,1) + " " + p.getLastName());
-		}
-	}
+	}		
 	
 	// A more pleasant looking print function
 	private void print(Object obj) {
@@ -69,8 +69,6 @@ public class Solution {
 	public static void main(String[] args) {
 		new Solution();
 	}
-	
-	
 	
 }
 
