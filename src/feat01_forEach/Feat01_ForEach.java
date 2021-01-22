@@ -17,21 +17,18 @@ public class Feat01_ForEach {
 	
 	public Feat01_ForEach() {
 		
-
 		System.out.println("Java 5 - List with Generic");
 		List<Integer> listNumbers = this.createList();
 		for(int i=0; i<listNumbers.size(); i++) {
 			System.out.println(listNumbers.get(i) );
 		}
 
-		
 		System.out.println("Java 5 - Iterator with Generic");
 		Iterator<Integer> it = listNumbers.iterator();
 		while(it.hasNext()){
 			Integer i = it.next();
 			System.out.println(i);
 		}
-		
 		
 		System.out.println("Java 8 - forEach - Anonymous Class");
 		listNumbers.forEach(new Consumer<Integer>() {
@@ -40,14 +37,10 @@ public class Feat01_ForEach {
 			}
 		});
 		
-		
 		System.out.println("Java 8 - forEach - Named Class");
 		MyConsumer action = new MyConsumer();
 		listNumbers.forEach(action);
-		
-		
 	}
-	
 	
 	//Consumer implementation that can be reused
 	class MyConsumer implements Consumer<Integer>{
