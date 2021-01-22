@@ -11,9 +11,9 @@ import java.util.function.Consumer;
  * Derived from https://www.journaldev.com/2389/java-8-features-with-examples#iterable-forEach
  * 
  */
-public class A_ForEach {
+public class ForEach {
 
-	public A_ForEach() {
+	public ForEach() {
 		List<Integer> list = this.createList();
 		
 		print("Java 1 - for");
@@ -63,7 +63,7 @@ public class A_ForEach {
 	
 	// Program begins here
 	public static void main(String[] args) {
-		new A_ForEach();
+		new ForEach();
 	}
 	
 }
