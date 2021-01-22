@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 
 public class Solution {
 
-	
 	public Solution() {
 		
 		List<Person> list = this.createList();
@@ -35,7 +34,6 @@ public class Solution {
 				print(p.getFirstName().substring(0,1) + " " + p.getLastName());
 			}
 		});		
-		
 	}
 			
 	// Consumer implementation that can be reused
@@ -74,7 +72,6 @@ public class Solution {
 
 
 class Person {
-	
 	private String firstName;
 	private String lastName;
 	
@@ -98,7 +95,6 @@ class Person {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	
 }
 
 
