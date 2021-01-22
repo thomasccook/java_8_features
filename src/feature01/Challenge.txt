@@ -1,0 +1,11 @@
+Create a class 
+
+	MyClass
+   		String firstName
+   		String lastName
+   
+and iterate through the class displaying
+
+   'initial of the first name' + lastName
+
+Use for(), iterator, forEach, and a customer Consumer Class

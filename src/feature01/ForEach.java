@@ -1,4 +1,4 @@
-package feat01_forEach;
+package feature01;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -10,34 +10,50 @@ import java.util.function.Consumer;
  * 
  * Challenge: create a class that contains fields (firstName, lastName) and sort by "lastName + ' ' + firstName"
  * 
- * 
  */
-public class Feat01_ForEach {
+
+// https://www.journaldev.com/2389/java-8-features-with-examples#iterable-forEach
+public class ForEach {
 
 	
-	public Feat01_ForEach() {
+	// A list of numbers
+	public List<Integer> createList() {
+		List<Integer> myList = new ArrayList<Integer>();
+		for(int i=0; i<10; i++) {
+			myList.add(i * 10);
+		}
+		return myList;
+	}	
+	
+	
+	public ForEach() {
 		
-		System.out.println("Java 5 - List with Generic");
-		List<Integer> listNumbers = this.createList();
+		List<Integer> listNumbers = null;
+		
+		p("Java 5 - List with Generic");
+		listNumbers = this.createList();
 		for(int i=0; i<listNumbers.size(); i++) {
 			System.out.println(listNumbers.get(i) );
 		}
 
-		System.out.println("Java 5 - Iterator with Generic");
+		p("Java 5 - Iterator with Generic");
+		listNumbers = this.createList();
 		Iterator<Integer> it = listNumbers.iterator();
 		while(it.hasNext()){
 			Integer i = it.next();
 			System.out.println(i);
 		}
 		
-		System.out.println("Java 8 - forEach - Anonymous Class");
+		p("Java 8 - forEach - Anonymous Class");
+		listNumbers = this.createList();
 		listNumbers.forEach(new Consumer<Integer>() {
 			public void accept(Integer t) {
 				System.out.println(t);
 			}
 		});
 		
-		System.out.println("Java 8 - forEach - Named Class");
+		p("Java 8 - forEach - Named Class");
+		listNumbers = this.createList();
 		MyConsumer action = new MyConsumer();
 		listNumbers.forEach(action);
 	}
@@ -50,19 +66,15 @@ public class Feat01_ForEach {
 	}
 	
 	
-	public List<Integer> createList() {
-		List<Integer> myList = new ArrayList<Integer>();
-		for(int i=0; i<10; i++) {
-			myList.add(i * 10);
-		}
-		return myList;
+
+	private void p(String str) {
+		System.out.println(str);
 	}
 	
 	
 	
-	
 	public static void main(String[] args) {
-		new Feat01_ForEach();
+		new ForEach();
 	}
 	
 	
