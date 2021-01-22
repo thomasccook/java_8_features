@@ -1,11 +1,23 @@
 Create a class 
 
-	MyClass
+	Person
    		String firstName
    		String lastName
    
 and iterate through the class displaying
 
-   'initial of the first name' + lastName
+   'initial of the firstName' + lastName
 
-Use for(), iterator, forEach, and a customer Consumer Class
+Use for(), iterator, forEach with a concrete Consumer, and forEach with an anonymous inner class
+
+
+Brenden Acosta
+Rafe Chung
+Konnor Lott
+Fahima Curtis
+Fenton Baldwin
+Teejay Wood
+Eva-Rose Major
+Charlize Wallace
+Maximillian Buck
+Leia Zavala

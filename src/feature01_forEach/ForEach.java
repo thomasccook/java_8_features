@@ -6,73 +6,65 @@ import java.util.List;
 import java.util.function.Consumer;
 
 /*
- * Iterating through a list of objects
+ * Here are four different ways of iterating through a list of Objects, ranging from Java 1 to Java 8.
  * 
- * Challenge: create a class that contains fields (firstName, lastName) and sort by "lastName + ' ' + firstName"
+ * Derived from https://www.journaldev.com/2389/java-8-features-with-examples#iterable-forEach
  * 
  */
-
-// https://www.journaldev.com/2389/java-8-features-with-examples#iterable-forEach
 public class ForEach {
 
+		
+	public ForEach() {
+		
+		List<Integer> list = this.createList();
+		
+		print("Java 1 - for");
+		for(int i=0; i<list.size(); i++) {
+			print(list.get(i));
+		}
+
+		print("Java 2 - Iterator");
+		Iterator<Integer> it = list.iterator();
+		while(it.hasNext()){
+			Integer i = it.next();
+			print(i);
+		}
+		
+		print("Java 8 - forEach - Concrete Class");
+		MyConsumer action = new MyConsumer();
+		list.forEach(action);
+		
+		print("Java 8 - forEach - Anonymous Inner Class");
+		list.forEach(new Consumer<Integer>() {
+			public void accept(Integer t) {
+				print(t);
+			}
+		});		
+		
+	}
 	
 	// A list of numbers
 	public List<Integer> createList() {
 		List<Integer> myList = new ArrayList<Integer>();
 		for(int i=0; i<10; i++) {
-			myList.add(i * 10);
+			myList.add(i);
 		}
 		return myList;
-	}	
+	}		
 	
-	
-	public ForEach() {
-		
-		List<Integer> listNumbers = null;
-		
-		p("Java 5 - List with Generic");
-		listNumbers = this.createList();
-		for(int i=0; i<listNumbers.size(); i++) {
-			System.out.println(listNumbers.get(i) );
-		}
-
-		p("Java 5 - Iterator with Generic");
-		listNumbers = this.createList();
-		Iterator<Integer> it = listNumbers.iterator();
-		while(it.hasNext()){
-			Integer i = it.next();
-			System.out.println(i);
-		}
-		
-		p("Java 8 - forEach - Anonymous Class");
-		listNumbers = this.createList();
-		listNumbers.forEach(new Consumer<Integer>() {
-			public void accept(Integer t) {
-				System.out.println(t);
-			}
-		});
-		
-		p("Java 8 - forEach - Named Class");
-		listNumbers = this.createList();
-		MyConsumer action = new MyConsumer();
-		listNumbers.forEach(action);
-	}
-	
-	//Consumer implementation that can be reused
+	// Consumer implementation that can be reused
 	class MyConsumer implements Consumer<Integer>{
 		public void accept(Integer t) {
-			System.out.println(t);
+			print(t);
 		}
 	}
 	
+	// A more pleasant looking print function
+	private void print(Object obj) {
+		System.out.println(obj);
+	}	
 	
-
-	private void p(String str) {
-		System.out.println(str);
-	}
-	
-	
-	
+	// Program begins here
 	public static void main(String[] args) {
 		new ForEach();
 	}
