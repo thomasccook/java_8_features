@@ -28,16 +28,24 @@ public class ForEach {
 			print(i);
 		}
 		
-		print("Java 8 - forEach - Concrete Class");
-		MyConsumer action = new MyConsumer();
-		list.forEach(action);
-		
 		print("Java 8 - forEach - Anonymous Inner Class");
 		list.forEach(new Consumer<Integer>() {
 			public void accept(Integer t) {
 				print(t);
 			}
-		});		
+		});			
+		
+		print("Java 8 - forEach - Concrete Class");
+		MyConsumer action = new MyConsumer();
+		list.forEach(action);
+		
+	}
+	
+	// Consumer implementation that can be reused
+	class MyConsumer implements Consumer<Integer>{
+		public void accept(Integer t) {
+			print(t);
+		}
 	}
 	
 	// A list of numbers
@@ -48,13 +56,6 @@ public class ForEach {
 		}
 		return myList;
 	}		
-	
-	// Consumer implementation that can be reused
-	class MyConsumer implements Consumer<Integer>{
-		public void accept(Integer t) {
-			print(t);
-		}
-	}
 	
 	// A more pleasant looking print function
 	private void print(Object obj) {
