@@ -100,3 +100,54 @@ class Person {
 	}
 	
 }
+
+
+
+/*
+
+Java 1 - for
+B Acosta
+R Chung
+K Lott
+F Curtis
+F Baldwin
+T Wood
+E Major
+C Wallace
+M Buck
+L Zavala
+Java 2 - Iterator
+B Acosta
+R Chung
+K Lott
+F Curtis
+F Baldwin
+T Wood
+E Major
+C Wallace
+M Buck
+L Zavala
+Java 8 - forEach - Concrete Class
+B Acosta
+R Chung
+K Lott
+F Curtis
+F Baldwin
+T Wood
+E Major
+C Wallace
+M Buck
+L Zavala
+Java 8 - forEach - Anonymous Inner Class
+B Acosta
+R Chung
+K Lott
+F Curtis
+F Baldwin
+T Wood
+E Major
+C Wallace
+M Buck
+L Zavala
+
+ */
