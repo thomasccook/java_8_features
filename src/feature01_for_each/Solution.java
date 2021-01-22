@@ -1,4 +1,4 @@
-package feature01_forEach;
+package feature01_for_each;
 
 import java.util.ArrayList;
 import java.util.Iterator;
