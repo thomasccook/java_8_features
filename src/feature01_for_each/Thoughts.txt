@@ -1,0 +1,2 @@
+Personal Opinion:
+	Providing many options to do something trivial does not increase my programming power.

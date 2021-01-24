@@ -5,7 +5,7 @@ Create a class
    		String lastName
    	}
    
-and put in a list   
+and put objects in a list   
    
 	list.add(new Person("Brenden","Acosta"));
 	list.add(new Person("Rafe","Chung"));
@@ -18,12 +18,15 @@ and put in a list
 	list.add(new Person("Maximillian","Buck"));
 	list.add(new Person("Leia","Zavala"));   
    
-and iterate through the class displaying
+and iterate through the list displaying
 
    'initial of the firstName' + " " + lastName
 
 Use 
-	for()
-	Iterator 
-	forEach with a Concrete Consumer
-	forEach with an Anonymous Inner Class Consumer
+	Java 1 - for loop
+	Java 2 - Iterator 
+	Java 5 - for - Generics
+	Java 8 - forEach - Anonymous Inline class
+	Java 8 - forEach - Anonymous Class
+	Java 8 - forEach - Lambda expression"
+	Java 8 - forEach - Method Reference - Locally defined

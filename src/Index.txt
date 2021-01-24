@@ -1,0 +1,147 @@
+Learning Schedule (subject to change)
+
+
+Derived From: 
+	https://www.journaldev.com/2389/java-8-features-with-examples
+	more ...
+
+
+Java 8
+-------
+feature01: forEach() method in Iterable interface
+feature02: default and static methods in Interfaces
+feature03: Functional Interfaces and Lambda Expressions
+feature04: Java Stream API for Bulk Data Operations on Collections
+feature05: Java Time API
+feature06: Collection API improvements
+feature07: Concurrency API improvements
+feature08: Java IO improvements
+feature09: Miscellaneous Core API improvements
+
+
+
+
+Java 9
+------
+feature01: Java 9 REPL (JShell)
+feature02: Factory Methods for Immutable List, Set, Map and Map.Entry
+feature03: Private methods in Interfaces
+feature04: Java 9 Module System
+feature05: Process API Improvements
+feature06: Try With Resources Improvement
+feature07: CompletableFuture API Improvements
+feature08: Reactive Streams
+feature09: Diamond Operator for Anonymous Inner Class
+feature10: Optional Class Improvements
+feature11: Stream API Improvements
+feature12: Enhanced @Deprecated annotation
+feature13: HTTP 2 Client
+feature14: Multi-Resolution Image API
+feature15: Miscellaneous Java 9 Features
+
+
+
+Java 10
+-------
+feature01: Time-Based Release Versioning (JEP 322)
+feature02: Local-Variable Type Inference (JEP 286)
+feature03: Experimental Java-Based JIT Compiler (JEP 317)
+feature04: Application Class-Data Sharing (JEP 310)
+feature05: Parallel Full GC for G1 (JEP 307)
+feature06: Garbage-Collector Interface (JEP 304)
+feature07: Additional Unicode Language-Tag Extensions (JEP 314)
+feature08: Root Certificates (JEP 319)
+feature09: Thread-Local Handshakes (JEP 312)
+feature10: Heap Allocation on Alternative Memory Devices (JEP 316)
+feature11: Remove the Native-Header Generation Tool – javah (JEP 313)
+feature12: Consolidate the JDK Forest into a Single Repository (JEP 296)
+feature13: API Changes
+
+
+
+
+
+Java 11
+-------
+feature01: Running Java File with single command
+feature02: Java String Methods
+feature03: Local-Variable Syntax for Lambda Parameters
+feature04: Nested Based Access Control
+feature05: JEP 309: Dynamic Class-File Constants
+feature06: JEP 318: Epsilon: A No-Op Garbage Collector
+feature07: JEP 320: Remove the Java EE and CORBA Modules
+feature08: JEP 328: Flight Recorder
+feature09: JEP 321: HTTP Client
+feature10: Reading/Writing Strings to and from the Files
+feature11: JEP 329: ChaCha20 and Poly1305 Cryptographic Algorithms
+feature12: JEP 315: Improve Aarch64 Intrinsics
+feature13: JEP 333: ZGC: A Scalable Low-Latency Garbage Collector (Experimental)
+feature14: JEP 335: Deprecate the Nashorn JavaScript Engine
+
+
+
+Java 12
+-------
+feature01: JVM Changes – JEP 189, JEP 346, JEP 344, and JEP 230.
+feature02: Switch Expressions
+feature03: File mismatch() Method
+feature04: Compact Number Formatting
+feature05: Teeing Collectors in Stream API
+feature06: Java Strings New Methods – indent(), transform(), describeConstable(), and resolveConstantDesc().
+feature07: JEP 334: JVM Constants API
+feature08: JEP 305: Pattern Matching for instanceof
+feature09: Raw String Literals is Removed From JDK 12.
+
+
+
+
+
+Java 13
+-------
+feature01: Text Blocks – JEP 355
+feature02: New Methods in String Class for Text Blocks
+feature03: Switch Expressions Enhancements – JEP 354
+feature04: Reimplement the Legacy Socket API – JEP 353
+feature05: Dynamic CDS Archive – JEP 350
+feature06: ZGC: Uncommit Unused Memory – JEP 351
+feature07: FileSystems.newFileSystem() Method
+feature08: DOM and SAX Factories with Namespace Support
+
+
+
+
+
+Java 14
+-------
+feature01: Switch Expressions (Standard) – JEP 361
+feature02: Pattern Matching for instanceof (Preview) – JEP 305
+feature03: Helpful NullPointerExceptions – JEP 358
+feature04: Records (Preview) – JEP 359
+feature05: Text Blocks (Second Preview) – JEP 368
+feature06: Packaging Tool (Incubator) – JEP 343
+feature07: NUMA-Aware Memory Allocation for G1 – JEP 345
+feature08: JFR Event Streaming – JEP 349
+feature09: Non-Volatile Mapped Byte Buffers – JEP 352
+feature10: ZGC on macOS – JEP 364
+feature11: ZGC on Windows – JEP 365
+feature12: Foreign-Memory Access API (Incubator) – JEP 370
+
+
+
+
+
+
+Java 15
+-------
+feature01: Sealed Classes (Preview) – JEP 360
+feature02: Pattern Matching for instanceof (Second Preview) – JEP 375
+feature03: Records (Second Preview) – JEP 359
+feature04: Text Blocks (Standard) – JEP 378
+feature05: Hidden Classes – JEP 371
+feature06: Remove the Nashorn JavaScript Engine – JEP 372
+feature07: Reimplement the Legacy DatagramSocket API – JEP 373
+feature08: Disable and Deprecate Biased Locking – JEP 374
+feature09: Shenandoah: A Low-Pause-Time Garbage Collector – JEP 379
+feature10: Remove the Solaris and SPARC Ports – JEP 381
+feature11: Foreign-Memory Access API (Second Incubator) – JEP 383
+feature12: Deprecate RMI Activation for Removal – JEP 385
