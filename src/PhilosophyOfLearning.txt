@@ -4,6 +4,6 @@ Here's the basic learning philosophy
 
 1. Learning something new requires comparing and contrasting with something old.
 
-2. Learning the details is done by seeing a large number of inputs and outputs.
+2. Learning the details is done by seeing a large number of examples.
 
 3. Learning retention comes only from active practice.

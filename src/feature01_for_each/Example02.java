@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.function.Consumer;
 
 /*
- * This example demonstrates that older loop method can conveniently leave a loop and skip loops,
+ * This example demonstrates that older loop method can conveniently leave a loop and skip iterations,
  * but forEach can only leave a loop by throwing an exception.
  * 
  */
@@ -39,7 +39,6 @@ public class Example02 {
 		
 		prn("Java 8 - forEach - can't use break or continue ... and return just leaves the current function and continues to the next");
 		Consumer<Integer> consumer1 = new Consumer<Integer>() {
-		    
 			public void accept(Integer i) {
 	        	if (i == 5) {
 	        		return;
@@ -51,7 +50,6 @@ public class Example02 {
 		
 		prn("Java 8 - forEach - to leave a loop, must throw an Exception");
 		Consumer<Integer> consumer2 = new Consumer<Integer>() {
-		    
 			public void accept(Integer i) {
 		        try {
 		        	if (i == 5) {
@@ -78,7 +76,7 @@ public class Example02 {
 	}
 
 	//////////////////////////////////////////
-	// Non-illustrative functions
+	// Supporting functions
 		
 	// A list of numbers
 	public List<Integer> createList() {

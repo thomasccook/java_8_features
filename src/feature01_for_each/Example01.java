@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 
 /*
  * Here are different way of iterating through an List, ranging from Java 1 to Java 8.
- * 
  */
 public class Example01 {
 
@@ -88,6 +87,7 @@ public class Example01 {
 		}
 	}
 	
+	// Method Reference
 	Consumer<Integer> myFunctionReference = i -> prn(i);
 		
 
