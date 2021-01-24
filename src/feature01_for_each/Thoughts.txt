@@ -1,2 +1,7 @@
-Personal Opinion:
-	Providing many options to do something trivial does not increase my programming power.
+Pros:
+	If possible, resuable business logic is a good idea for consistency and convenience.
+
+
+Cons:
+	Two loops may be similar, but they are seldom identical, so reusing a non-trivial inner loop may be rare.
+	This forEach seems good for trivial business logic, but providing many, many ways to do something trivial seems not very useful.
