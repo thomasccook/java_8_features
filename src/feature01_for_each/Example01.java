@@ -60,7 +60,7 @@ public class Example01 {
 		    prn(i);
 		});
 
-		prn("Java 8 - forEach - Method Reference - Locally defined");
+		prn("Java 8 - forEach - Method Reference - Defined by me");
 		list.forEach(myFunctionReference);			
 		
 		prn("Java 8 - forEach - Method Reference - Third Party");
