@@ -20,13 +20,13 @@ and put objects in a list
    
 and iterate through the list displaying
 
-   'initial of the firstName' + " " + lastName
+   'initial letter of the firstName' + " " + lastName
 
 Use 
 	Java 1 - for loop
 	Java 2 - Iterator 
 	Java 5 - for - Generics
+	Java 8 - forEach - Concrete class
 	Java 8 - forEach - Anonymous Inline class
-	Java 8 - forEach - Anonymous Class
-	Java 8 - forEach - Lambda expression"
+	Java 8 - forEach - Lambda expression
 	Java 8 - forEach - Method Reference - Locally defined
