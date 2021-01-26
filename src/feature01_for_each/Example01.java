@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.function.Consumer;
 
 /*
- * Here are different way of iterating through an List, ranging from Java 1 to Java 8.
+ * Here are different way of iterating through a List, ranging from Java 1 to Java 8.
  */
 public class Example01 {
 

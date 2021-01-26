@@ -1,7 +1,8 @@
 Pros:
-	If possible, resuable business logic is a good idea for consistency and convenience.
+	If possible, resuable business logic using 'forEach' and a 'Consumer' is a good idea for consistency and convenience.
 
 
 Cons:
-	Two loops may be similar, but they are seldom identical, so reusing a non-trivial inner loop may be rare.
-	This forEach seems good for trivial business logic, but providing many, many ways to do something trivial seems not very useful.
+	Although two loops may be similar, but they are seldom identical, so reusing a non-trivial Consumer may be rare.
+	There are many ways to use 'forEach', which makes usage hard to remember.
+	Without 'break', 'continue' or an intuitive 'return', the old loops may be better tools.

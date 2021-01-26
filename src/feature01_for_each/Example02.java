@@ -21,7 +21,7 @@ public class Example02 {
 		prn("Java 5 - leave a loop");	
 		for (Integer i: list) {
 			if (i == 5) {
-				break;
+				break; // very often we use 'return;'
 			}
 			prn(i);			
 		}
