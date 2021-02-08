@@ -2,6 +2,6 @@ Pros:
 	This greatly expands the power of interfaces and should give the programmer more powerful tools for modeling.
 
 Cons:
-	Last week we learned about "Composition over Inheritance", which said you should tend toward Interfaces.
+	Last week we learned about "Composition over Inheritance", which says you should tend toward Interfaces.
 	This week, we find that Interfaces are becoming more like Classes.
 	It may be that the difference between Classes and Interfaces is completely artificial, and Java has too many words for just a few concepts.
