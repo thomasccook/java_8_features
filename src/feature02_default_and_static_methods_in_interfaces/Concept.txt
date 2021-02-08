@@ -1,0 +1,23 @@
+Feature: Variables, default methods and static methods in Interfaces
+
+
+What:
+	Starting with Java8, Interfaces are no longer purely abstract methods. Methods
+	and variables can be put in interfaces.
+
+When:
+	Java8+
+	
+Why: 
+	This functionality allows a pseudo-multiple inheritance without the Diamond Problem.
+	Java 8 uses default and static methods heavily in Collection API for Lambda Expressions.
+	
+Notes:
+	If you wish to stop iterating, you must throw an exception.
+	
+		
+References:
+	https://www.journaldev.com/1775/multiple-inheritance-in-java
+	https://www.journaldev.com/2752/java-8-interface-changes-static-method-default-method
+		
+	
