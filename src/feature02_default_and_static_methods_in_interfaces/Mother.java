@@ -25,7 +25,6 @@ public interface Mother {
 	static String getLastName(){
 		return lastName;
 	}	
-
 }
 
 

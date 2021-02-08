@@ -34,9 +34,7 @@ public class Example01 {
 	public static void main(String[] args) {
 		new Example01();
 	}		
-	
 }
-
 
 /* Output
  
@@ -54,6 +52,3 @@ Mother : Kim Kardashian
 Card : I Love You, Kim
   
  */
-
-
-

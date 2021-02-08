@@ -14,11 +14,7 @@ public class CelebrityChild implements Father, Mother {
 
 	@Override
 	public void sendMothersDayCard() {
-		
 		System.out.println("Card : I Love You, " + Mother.getFirstName());
-		
 	}
 	
 }
-
-

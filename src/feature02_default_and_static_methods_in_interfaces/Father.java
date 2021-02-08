@@ -6,12 +6,12 @@ public interface Father {
 	String firstName = "Kanye";
 	String lastName = "West";
 	
-	// Interface can have a function
+	// Interface can have functions
 	default void printFather() {
 		System.out.println("Father : " + Father.getFirstName() + " " + Father.getLastName());
 	}
 	
-	// Interface can have a static function
+	// Interface can have a static functions
 	static String getFirstName(){
 		return firstName;
 	}	
