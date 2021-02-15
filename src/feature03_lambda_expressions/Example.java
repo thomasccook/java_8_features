@@ -66,9 +66,9 @@ public class Example {
 	
 	public void example02() {
 		String bbb = "bbb";
-		StringIn_StringOut fxnb1 =  (b) -> {return b.toUpperCase();};
-		StringIn_StringOut fxnb2 =  (b) -> {return b + b;};
-		StringIn_BooleanOut fxnb3 = (b) -> {return b.toLowerCase().contains("bbb");};
+		StringIn_StringOut  fxnb1 =  (b) -> {return b.toUpperCase();};
+		StringIn_StringOut  fxnb2 =  (b) -> {return b + b;};
+		StringIn_BooleanOut fxnb3 =  (b) -> {return b.toLowerCase().contains("bbb");};
 		prn(fxnb1.apply(bbb));
 		prn(fxnb2.apply(bbb));
 		prn(fxnb3.apply(bbb));
@@ -76,8 +76,8 @@ public class Example {
 		
 		// Generic
 		String ccc = "ccc";
-		T1In_T2Out<String, String> fxnc1 =  (c) -> {return c.toUpperCase();};
-		T1In_T2Out<String, String> fxnc2 =  (c) -> {return c + c;};
+		T1In_T2Out<String, String>  fxnc1 =  (c) -> {return c.toUpperCase();};
+		T1In_T2Out<String, String>  fxnc2 =  (c) -> {return c + c;};
 		T1In_T2Out<String, Boolean> fxnc3 = (c) -> {return c.toLowerCase().contains("ccc");};
 		prn(fxnc1.apply(ccc));
 		prn(fxnc2.apply(ccc));
@@ -87,7 +87,7 @@ public class Example {
 		String ddd = "ddd";
 		Function<String, String> fxnd1 = (d) -> {return d.toUpperCase();};
 		Function<String, String> fxnd2 = (d) -> {return d + d;};
-		Predicate<String> fxnd3 	   = (d) -> {return d.toLowerCase().contains("ddd");};
+		Predicate<String> 		 fxnd3 = (d) -> {return d.toLowerCase().contains("ddd");};
 		prn(fxnd1.apply(ddd));
 		prn(fxnd2.apply(ddd));
 		prn(fxnd3.test(ddd));
@@ -125,17 +125,17 @@ public class Example {
         data.add("dddddd");  
 	
         // Functions we defined above
-        StringIn_StringOut fxnb1 = (b)			-> {return b.toUpperCase();};
-        T1In_T2Out<String, String> fxnc2 = (c)	-> {return c + c;};
-        Predicate<String> fxnd3 = (c)			-> {return c.toLowerCase().contains("ddd");};
+        StringIn_StringOut fxnb1 = (b)				-> {return b.toUpperCase();};
+        T1In_T2Out<String, String> fxnc2 = (c)		-> {return c + c;};
+        Predicate<String> fxnd3 = (d)				-> {return d.toLowerCase().contains("ddd");};
         
 		/////////////////////////////////////////
 		// Chaining
         data.stream()
-			.map((p) 	 -> fxnb1.apply(p))
-			.map((p) 	 -> fxnc2.apply(p))
-			.filter((p)  -> fxnd3.test(p))
-			.forEach((p) -> {prn(p);});
+			.map((p)		-> fxnb1.apply(p))
+			.map((p)		-> fxnc2.apply(p))
+			.filter((p)		-> fxnd3.test(p))
+			.forEach((p)	-> {prn(p);});
 	}
 	/*
 	 * Output:
