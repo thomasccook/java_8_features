@@ -125,9 +125,9 @@ public class Example {
         data.add("dddddd");  
 	
         // Functions we defined above
-        StringIn_StringOut fxnb1 = (b) 			-> {return b.toUpperCase();};
-        T1In_T2Out<String, String> fxnc2 = (c) 	-> {return c + c;};
-        Predicate<String> fxnd3 = (c) 			-> {return c.toLowerCase().contains("ddd");};
+        StringIn_StringOut fxnb1 = (b)			-> {return b.toUpperCase();};
+        T1In_T2Out<String, String> fxnc2 = (c)	-> {return c + c;};
+        Predicate<String> fxnd3 = (c)			-> {return c.toLowerCase().contains("ddd");};
         
 		/////////////////////////////////////////
 		// Chaining
