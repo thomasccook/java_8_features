@@ -135,7 +135,7 @@ public class Example {
 			.map((p)		-> fxnb1.apply(p))
 			.map((p)		-> fxnc2.apply(p))
 			.filter((p)		-> fxnd3.test(p))
-			.forEach((p)	-> {prn(p);});
+			.forEach((p)	-> prn(p));
 	}
 	/*
 	 * Output:
