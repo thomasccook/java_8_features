@@ -8,7 +8,7 @@ When:
 	
 Why: 
 	Java is Object-Oriented. That means any function MUST be defined in an Object, which can be bulky.
-	Can we have a function by itself? Lambda Expressions are function not in a Class.
+	Can we have a function by itself? Lambda Expressions are a function not in a Class.
 	
 Notes:
 	The phrase "Lambda Expression" probably comes from the "Lambda Calculus", which was a mathematics system introduced by Alonzo Church in the 1930's.

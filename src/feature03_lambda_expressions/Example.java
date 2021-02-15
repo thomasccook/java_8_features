@@ -113,16 +113,16 @@ public class Example {
 	
 
 	public void example03() {
-    	List<String> places = new ArrayList<>();
-        places.add("bbbbbb");
-        places.add("bbbccc");
-        places.add("bbbddd");
-        places.add("cccbbb");
-        places.add("cccccc");
-        places.add("cccddd");  
-        places.add("dddbbb");
-        places.add("dddccc");
-        places.add("dddddd");  
+    	List<String> data = new ArrayList<>();
+        data.add("bbbbbb");
+        data.add("bbbccc");
+        data.add("bbbddd");
+        data.add("cccbbb");
+        data.add("cccccc");
+        data.add("cccddd");  
+        data.add("dddbbb");
+        data.add("dddccc");
+        data.add("dddddd");  
 	
         // Functions we defined above
         StringIn_StringOut fxnb1 = (b) 			-> {return b.toUpperCase();};
@@ -131,7 +131,7 @@ public class Example {
         
 		/////////////////////////////////////////
 		// Chaining
-        places.stream()
+        data.stream()
 			.map((p) 	 -> fxnb1.apply(p))
 			.map((p) 	 -> fxnc2.apply(p))
 			.filter((p)  -> fxnd3.test(p))
