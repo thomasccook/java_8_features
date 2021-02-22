@@ -125,7 +125,7 @@ public class Example {
 	
 	
 	/////////////////////////////////////////////////
-	// Filter -  n objects in, <=n object out
+	// Filter -  n objects in, <=n objects out
 	
 	public void example06() {
 		if(true) return;;
