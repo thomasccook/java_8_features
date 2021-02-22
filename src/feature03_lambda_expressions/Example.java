@@ -2,6 +2,7 @@ package feature03_lambda_expressions;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
@@ -52,13 +53,14 @@ public class Example {
 	
 	// Define the input and output of your function with generic variables
 	@FunctionalInterface interface   T1In_T2Out<T1, T2>       { T2 apply(T1 t1); }
-	@FunctionalInterface interface T1T2In_T3Out<T1, T2, T3>   { T3 apply(T1 t1, T2 t2); }	
+	@FunctionalInterface interface T1T2In_T3Out<T1, T2, T3>   { T3 apply(T1 t1, T2 t2); }
 	
 	// Use an existing definition
 	// public interface Predicate<T> 	{ public boolean test(T  t); } 
 	// public interface BinaryOperator  { public T apply(T x, T y); } 
 	// public interface Function 		{ public R apply(T t); }
-	
+	// public interface Consumer<Integer> myFunctionReference = i -> prn(i);
+		
 	public void example02() {
 		String bbb = "bbb";
 		StringIn_StringOut  fxnb1 =  (b) -> {return b.toUpperCase();};

@@ -1,0 +1,10 @@
+Pros:
+	Collections, Streams and Lambda functions work together to make much nices looking code.
+	Parallel Streams have the possibility of provding multi-threading with very little syntax.
+	
+Cons:
+	The underlying supporting classes of Optional, Function, BiFunction, Predicate, Consumer, 
+		Supplier, etc. are awkward ways to define Arguments-in/Arguments-out.
+	Streams are convenient if all works well, but hard to debug when things go wrong.
+	
+	
