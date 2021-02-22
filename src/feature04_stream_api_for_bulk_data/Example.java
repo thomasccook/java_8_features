@@ -67,10 +67,10 @@ public class Example {
 		if(true) return;;
 		List<Person> list = Arrays.asList(this.listPerson);
 			
-		// Order in matches order out
+		// Order in matches order out.
 		list
-			.stream()
-			.forEach(p -> prn(p));
+		.stream()
+		.forEach(p -> prn(p));
 	}
 	
 	// Parallel Stream - data not in order - Multiple Threads (I guess)
@@ -78,9 +78,10 @@ public class Example {
 		if(true) return;;
 		List<Person> list = Arrays.asList(this.listPerson);
 	
+		// Order in does not match order out.
 		list
-			.parallelStream()
-			.forEach(p -> prn(p));
+		.parallelStream()
+		.forEach(p -> prn(p));
 	}	
 	
 	
@@ -92,21 +93,22 @@ public class Example {
 		if(true) return;;
 		List<Person> list = Arrays.asList(this.listPerson);
 			
-		// Extract all first names and make lower case
+		// Extract all first names and make lower case.
 		list
-			.stream()
-			.map (p -> p.getFirstName().toLowerCase())
-			.forEach(p -> prn(p));
+		.stream()
+		.map (p -> p.getFirstName().toLowerCase())
+		.forEach(p -> prn(p));
 	}	
 	
 	public void example04() {
 		if(true) return;;
 		List<Person> list = Arrays.asList(this.listPerson);
 		
+		// Print out all ages.
 		list
-			.stream()
-			.mapToInt(Person::getAge)
-			.forEach(p -> prn(p));
+		.stream()
+		.mapToInt(Person::getAge)
+		.forEach(p -> prn(p));
 	}
 		
 	public void example05() {
@@ -115,9 +117,9 @@ public class Example {
 		
 		// Organize by last name.
 		list
-			.stream()
-			.sorted(Comparator.comparing(Person::getLastName))
-			.forEach(p -> prn(p));
+		.stream()
+		.sorted(Comparator.comparing(Person::getLastName))
+		.forEach(p -> prn(p));
 	}		
 	
 	
@@ -131,9 +133,9 @@ public class Example {
 		
 		// Get all the Reed's
 		list
-			.stream()
-			.filter(p -> p.getLastName().equals("Reed"))
-			.forEach(p -> prn(p));
+		.stream()
+		.filter(p -> p.getLastName().equals("Reed"))
+		.forEach(p -> prn(p));
 	}	
 	
 	/////////////////////////////////////////////////
@@ -169,17 +171,18 @@ public class Example {
 	}		
 	
 	/////////////////////////////////////////////////
-	// Collect - Stream<T> in, List<T> or Map<R, T> out
+	// Collect - Stream<T> in, List<T> or Map<R, T> or Single Object out
 	
 	public void example09() {
 		if(true) return;;
 		List<Person> list= Arrays.asList(this.listPerson);
 		
+		// Put all the Females into a new List.
 		List<Person> listFemale =
 			    list
-			    	.stream()
-			    	.filter(p -> p.getGender().equals("F"))
-			    	.collect(Collectors.toList());
+			    .stream()
+			    .filter(p -> p.getGender().equals("F"))
+			    .collect(Collectors.toList());
 
 		prn(listFemale.size());
 		
@@ -189,10 +192,11 @@ public class Example {
 		if(true) return;;
 		List<Person> list= Arrays.asList(this.listPerson);
 		
+		// Put people with the same last name in their own map.
 		Map<String, List<Person>> byLastName =
 			    list
-			    	.parallelStream()
-			    	.collect(Collectors.groupingBy(Person::getLastName));
+			    .parallelStream()
+			    .collect(Collectors.groupingBy(Person::getLastName));
 
 		prn(byLastName.get("Perkins"));
 		prn(byLastName.get("Reed"));
