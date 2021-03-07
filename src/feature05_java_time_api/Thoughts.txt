@@ -1,0 +1,24 @@
+Pros:
+	The new API does consist of a nice set of tools, and is one of the better time API's I have seen. I haven't worked with it much yet.
+	
+Cons:
+	Technically, time is a mathematics called "Modular Arithmetic". Time is circles within circles within circles and NOT linear. However, we insist on
+		using linear Epoch time (the number of seconds since January 1, 1970) which probably explains why time usage is so awkward. We're using the wrong
+		math.
+	There are many circles in time
+			years
+			months
+			days
+			hours
+			seconds
+		but this API has a bias towards LocalDate (day circle) and LocalTime (second circle). Why not LocalYear? LocalMonth? LocalHour? LocalSecond? There 
+		should be only one class to represent all the many circles of time, so having LocatDate and LocalTime is very biased toward these two circles.
+	Basically, this is still an inconsistent and biased view of Time.
+	As a programmer, I have watched hundreds of hours being wasted by people resolving time issues, even in the new java.time.* package.
+	We need a better model of time. 
+		
+	
+https://en.wikipedia.org/wiki/Modular_arithmetic	
+
+	
+	
