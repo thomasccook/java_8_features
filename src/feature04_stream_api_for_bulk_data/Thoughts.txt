@@ -1,10 +1,11 @@
 Pros:
-	Collections, Streams and Lambda functions work together to make much nices looking code.
-	Parallel Streams have the possibility of provding multi-threading with very little syntax.
+	Collections, Streams and Lambda Functions work together to make much nicer looking code.
+	Parallel Streams have the possibility of providing multi-threading with very little syntax to help on large data sets.
 	
 Cons:
 	The underlying supporting classes of Optional, Function, BiFunction, Predicate, Consumer, 
 		Supplier, etc. are awkward ways to define Arguments-in/Arguments-out.
 	Streams are convenient if all works well, but hard to debug when things go wrong.
+	Collect can be very powerful, but can be hard to learn.
 	
 	

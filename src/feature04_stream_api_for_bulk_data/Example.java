@@ -1,5 +1,7 @@
 package feature04_stream_api_for_bulk_data;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -66,7 +68,7 @@ public class Example {
 	public void example01() {
 		if(true) return;;
 		List<Person> list = Arrays.asList(this.listPerson);
-			
+		
 		// Order in matches order out.
 		list
 		.stream()
@@ -157,15 +159,17 @@ public class Example {
 	
 	public void example08() {
 		if(true) return;;
-		List<Person> list= Arrays.asList(this.listPerson);
+		//List<Person> list = Arrays.asList(this.listPerson);
+		List<Person> list = new ArrayList<Person>();		
 		
 		// Get the average age
 		double d = 
 			list
 			.stream()
 			.mapToInt(Person::getAge)
-			.average()
-			.getAsDouble();
+			.average()  
+			.orElse(-1);
+			//.getAsDouble()
 		
 		prn(d);
 	}		
