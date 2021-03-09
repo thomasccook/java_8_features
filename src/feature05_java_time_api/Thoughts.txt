@@ -9,10 +9,10 @@ Cons:
 			hours
 			seconds
 		and this API uses LocalDate (the day circle) and LocalTime (the second circle). Why not LocalYear? LocalMonth? LocalHour? LocalSecond? 
-		There should be only one class to represent all the circles.
+		There should be just one class to represent all the circles.
 	
-	As a programmer, I have watched hundreds of hours being wasted by people resolving time issues, even in the new java.time.* package.
-	We need a better model of time. 
+	As a programmer, I have watched hundreds of hours being wasted by people resolving JAva and Javascript time issues, 
+	even in the new java.time.* package. We need a better model of time. 
 		
 	
 https://en.wikipedia.org/wiki/Modular_arithmetic	

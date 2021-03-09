@@ -19,6 +19,8 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
 
+import org.junit.Test;
+
 public class Example {
 
 			
@@ -131,8 +133,8 @@ public class Example {
 		duration = Duration.ofDays(7);
 		prn("7 days", duration);
 		
-		duration = Duration.ofDays(1234);
-		prn("1234 days", duration);		
+		duration = Duration.ofDays(365);
+		prn("365 days", duration);		
 		
 	}		
 	
@@ -198,8 +200,11 @@ public class Example {
 		LocalDate today = LocalDate.now();
 		LocalDate later = LocalDate.ofYearDay(2021, 365);
 		
+		Duration duration = Duration.ofDays(365);
+		prn("365 days as Duration", duration);				
+		
 		Period period = today.until(later);
-		prn("Period Format", period);
+		prn("365 days as Period", period);
 		
 	}
 	
@@ -214,14 +219,14 @@ public class Example {
 
 		prn("Default format of LocalDate", date);
 		prn("Weird Format", date.format(DateTimeFormatter.ofPattern("d::MMM::uuuu")));
-		prn("ISO Format", date.format(DateTimeFormatter.BASIC_ISO_DATE));
+		prn("ISO Format", date.format(DateTimeFormatter.ISO_DATE));
 		
 		prn();
 		
 		LocalDateTime dateTime = LocalDateTime.now();
 		prn("Default format of LocalDateTime", dateTime);
 		prn("Weird Format", dateTime.format(DateTimeFormatter.ofPattern("d::MMM::uuuu HH::mm::ss")));
-		prn("ISO Format", dateTime.format(DateTimeFormatter.BASIC_ISO_DATE));
+		prn("ISO Format", dateTime.format(DateTimeFormatter.ISO_DATE_TIME));
 		
 		prn();
 		
@@ -268,6 +273,17 @@ public class Example {
 		prn("java.time.ZonedDateTime -> java.util.GregorianCalendar", gc);
 		
 	}	
+	
+	
+	@Test
+	public void localDateTime_Vs_zonedDateTime() {
+
+		LocalDateTime localDateTime = LocalDateTime.now();
+		prn("Now", localDateTime);
+		
+		ZonedDateTime zonedDateTime = ZonedDateTime.now(ZoneId.of("Asia/Kolkata"));
+		prn("Now", zonedDateTime);
+	}
 	
 	
 	
