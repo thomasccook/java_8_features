@@ -7,6 +7,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Spliterator;
 
+import org.junit.Test;
+
 public class Example {
 
 			
