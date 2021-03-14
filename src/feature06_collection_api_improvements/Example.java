@@ -9,11 +9,12 @@ import java.util.Spliterator;
 
 import org.junit.Test;
 
+//Collection API Improvements
 public class Example {
 
 			
 	/////////////////////////////////////////////////
-	// Collection API Improvements
+	// Iterator
 	
 	@Test
 	public void iterator_forEachRemaining() {
@@ -30,6 +31,9 @@ public class Example {
 		iter.forEachRemaining(n -> prn(n));
 	}
 
+	/////////////////////////////////////////////////
+	// Collection	
+	
 	// @Test
 	public void collection_removeIf() {
 
