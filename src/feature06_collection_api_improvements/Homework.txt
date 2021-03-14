@@ -1,0 +1,1 @@
+Create an example of Spliterator that also use Stream and parallel processing.
