@@ -39,7 +39,7 @@ public class Example {
 
 		ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9));
         
-        // java.util.function.Predicate
+		// java.util.function.Predicate
         list.removeIf(n -> (n % 3 == 0)); 
        
         prn(list);
@@ -57,7 +57,7 @@ public class Example {
         
 		Spliterator<Integer> spliterator = list.spliterator();
 		
-        // java.util.function.Consumer
+		// java.util.function.Consumer
 		spliterator.tryAdvance(n -> prn(n)); 
 		spliterator.tryAdvance(n -> prn(n)); 
 		spliterator.tryAdvance(n -> prn(n)); 
@@ -129,49 +129,48 @@ public class Example {
 	// @Test
 	public void map_replaceAll() {
 
-        HashMap<String, Integer> map1 = new HashMap<>(); 
-        map1.put("key1", 1); 
-        map1.put("key2", 2); 
-        map1.put("key3", 3); 
-        map1.put("key4", 4); 
-    
-        // java.util.function.BiFunction
-        map1.replaceAll((key, oldValue) -> oldValue * oldValue); 
-  
-        prn(map1);
+		HashMap<String, Integer> map1 = new HashMap<>(); 
+		map1.put("key1", 1); 
+		map1.put("key2", 2); 
+		map1.put("key3", 3); 
+		map1.put("key4", 4); 
+		
+		// java.util.function.BiFunction
+		map1.replaceAll((key, oldValue) -> oldValue * oldValue); 
+		  
+		prn(map1);
 	}	
 	
 	// https://www.geeksforgeeks.org/hashmap-compute-method-in-java-with-examples/
 	// @Test
 	public void map_compute() {
 
-        Map<String, String> map = new HashMap<>(); 
-        map.put("Name", "Aman"); 
-        map.put("Address", "Kolkata"); 
-  
-        // java.util.function.BiFunction
-        map.compute("Name", (key, val) -> val.concat(" Singh")); 
-        map.compute("Address", (key, val)  -> val.concat(" West-Bengal")); 
-  
-        prn(map);
+		Map<String, String> map = new HashMap<>(); 
+		map.put("Name", "Aman"); 
+		map.put("Address", "Kolkata"); 
+		  
+		        // java.util.function.BiFunction
+		map.compute("Name", (key, val) -> val.concat(" Singh")); 
+		map.compute("Address", (key, val)  -> val.concat(" West-Bengal")); 
+		  
+		prn(map);
 	}	
 	
 	// https://www.geeksforgeeks.org/hashmap-mergekey-value-bifunction-method-in-java-with-examples/
 	// @Test
 	public void map_merge() {
 
-        HashMap<Integer, String> map = new HashMap<>(); 
-        map.put(1, "L"); 
-        map.put(2, "M"); 
-        map.put(3, "N"); 
-  
-        map.merge( 1, "A", (v1, v2)  -> {return v1 + "_" + v2;});
-        map.merge( 2, "B", (v1, v2)  -> {return v1 + "_" + v2;});
-        map.merge( 3, "C", (v1, v2)  -> {return v1 + "_" + v2;});
-  
-        // print new mapping 
-        prn(map);
-		
+		HashMap<Integer, String> map = new HashMap<>(); 
+		map.put(1, "L"); 
+		map.put(2, "M"); 
+		map.put(3, "N"); 
+		  
+		map.merge( 1, "A", (v1, v2)  -> {return v1 + "_" + v2;});
+		map.merge( 2, "B", (v1, v2)  -> {return v1 + "_" + v2;});
+		map.merge( 3, "C", (v1, v2)  -> {return v1 + "_" + v2;});
+		  
+		// print new mapping 
+		prn(map);		
 	}	
 	
 	/////////////////////////////////////////////////////
