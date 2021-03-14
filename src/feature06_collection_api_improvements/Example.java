@@ -40,9 +40,9 @@ public class Example {
 		ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9));
         
 		// java.util.function.Predicate
-        list.removeIf(n -> (n % 3 == 0)); 
-       
-        prn(list);
+		list.removeIf(n -> (n % 3 == 0)); 
+
+		prn(list);
 	}
 	
 	/////////////////////////////////////////////////
