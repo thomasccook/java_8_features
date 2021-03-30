@@ -16,7 +16,7 @@ public class Example {
 	/////////////////////////////////////////////////
 	// Iterator
 	
-	@Test
+	//@Test
 	public void iterator_forEachRemaining() {
 
 		ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9));
@@ -89,9 +89,11 @@ public class Example {
 
 		ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9));
         
-		Spliterator<Integer> splt = list.spliterator();
+		Spliterator<Integer> splt1 = list.spliterator();
+		Spliterator<Integer> splt2 = splt1.trySplit();
 
-		prn(splt.estimateSize());
+		prn(splt1.estimateSize());
+		prn(splt2.estimateSize());
 	}	
 	
 	// https://richardstartin.github.io/posts/spliterator-characteristics-and-performance
@@ -135,6 +137,10 @@ public class Example {
 		map1.put("key3", 3); 
 		map1.put("key4", 4); 
 		
+		prn(map1);
+		
+		prn();
+		
 		// java.util.function.BiFunction
 		map1.replaceAll((key, oldValue) -> oldValue * oldValue); 
 		  
@@ -148,6 +154,8 @@ public class Example {
 		Map<String, String> map = new HashMap<>(); 
 		map.put("Name", "Aman"); 
 		map.put("Address", "Kolkata"); 
+		
+		prn(map);
 		  
 		        // java.util.function.BiFunction
 		map.compute("Name", (key, val) -> val.concat(" Singh")); 
@@ -165,6 +173,8 @@ public class Example {
 		map.put(2, "M"); 
 		map.put(3, "N"); 
 		  
+		prn(map);
+		
 		map.merge( 1, "A", (v1, v2)  -> {return v1 + "_" + v2;});
 		map.merge( 2, "B", (v1, v2)  -> {return v1 + "_" + v2;});
 		map.merge( 3, "C", (v1, v2)  -> {return v1 + "_" + v2;});
