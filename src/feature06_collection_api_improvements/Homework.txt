@@ -1,16 +1,17 @@
-Create an example of Spliterator that also uses Stream and parallel processing.
-
 Assignment:
-	Make a large list of JSON {id, name, birthdate}
-	Use Spliterator to divide
-	Change to {id, name, birthage, eligible for coupon}
-		
- Extra Credit:
- 	Show that there are bad uses of Spliterator and good uses of Spliterator for some problem.	
-	
+	Modify Feature06Homework.java from Single-Threaded to Multi-Threaded.
+	Slow down each racetime to take 1-5 seconds.
+	Increase to 100 horses.
+
+Use :
+	stream().parallel
+	Use a Synchronized collection that blocks the next round until the current round is finished.
+		https://www.baeldung.com/java-synchronized-collections
+	Change the ThreadPool size to one thread per race.
+		https://www.baeldung.com/java-8-parallel-streams-custom-threadpool
+	Watch your threads in Visual VM
+		https://visualvm.github.io/
+					
 Reading:
 	Item 48 of Effective Java Version 3
-	
-Link:
-	https://4comprehension.com/implementing-a-randomized-stream-spliterator-in-java/
-	https://www.javaspecialists.eu/archive/Issue258-ShuffleCollector.html		
+		
