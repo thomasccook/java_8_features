@@ -79,6 +79,9 @@ public class GetDataFromAnnotations {
 		return null;
 	}
 	
+	/////////////////////////////////////////
+	// Support Functions
+	
 	public void prn(Object obj) {
 		System.out.println(obj);
 	}

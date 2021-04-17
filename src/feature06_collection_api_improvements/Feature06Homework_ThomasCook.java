@@ -19,7 +19,7 @@ enum Mode {
 class Params {
 	public static Mode mode = Mode.CUSTOM_THREAD_POOL;
 	
-	public static int[] horseCount = {25};
+	public static int[] horseCount = { 100 };
 	// public static int[] horseCount = {50, 100, 150, 200, 250, 300, 350, 400, 450, 500};
 	
 	// Results
@@ -31,7 +31,7 @@ public class Feature06Homework_ThomasCook {
 	int HORSES_PER_RACE = 5;
 	
 	int MIN_RACE_TIME = 1000;
-	int MAX_RACE_TIME = 1000;
+	int MAX_RACE_TIME = 5000;
 
 	public double process(int horseCount) throws InterruptedException, ExecutionException {
 		prn("Begin Horse Races\n");
