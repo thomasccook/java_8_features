@@ -19,8 +19,11 @@ enum Mode {
 class Params {
 	public static Mode mode = Mode.CUSTOM_THREAD_POOL;
 	
-	public static int[] horseCount = {100};
+	public static int[] horseCount = {25};
 	// public static int[] horseCount = {50, 100, 150, 200, 250, 300, 350, 400, 450, 500};
+	
+	// Results
+	// https://docs.google.com/spreadsheets/d/1m7wrULmSs3RVI1QZDL00hC9za5X-yGOSgUJkywONup4/edit?usp=sharing
 }
 
 public class Feature06Homework_ThomasCook {
