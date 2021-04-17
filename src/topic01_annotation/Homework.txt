@@ -1,0 +1,4 @@
+Assignment:
+	Create an annotation with an integer value.
+	Create a class where the annotation is attached to the class, fields, and methods.
+	Find all the integer value on all of the annotations and add them together.
