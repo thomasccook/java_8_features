@@ -16,7 +16,6 @@ public class DefineAnnotationsAndClasses {
 	@Retention(RetentionPolicy.RUNTIME)
 	public @interface Ann01 {
 		String metadata01() default "www";
-
 		String metadata02() default "xxx";
 	}
 
@@ -24,11 +23,8 @@ public class DefineAnnotationsAndClasses {
 	@Retention(RetentionPolicy.RUNTIME)
 	public @interface Ann02 {
 		String metadata03() default "yyy";
-
 		String metadata04() default "zzz";
 	}
-	
-	
 	
 	
 	////////////////////////////

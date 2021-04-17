@@ -25,8 +25,6 @@ public class GetDataFromAnnotations {
 		
 	}
 
-
-
 	/////////////////////////////////////////
 	// Getting Values off of annotations
 
