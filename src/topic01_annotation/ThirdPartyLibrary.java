@@ -38,7 +38,7 @@ public class ThirdPartyLibrary {
 	public void process() {
 		
 		// Get Annotation Data off of Class01
-		getMetadataOnClass( Class01.class, 			   "ann01", "metadata01");
+		getMetadataOnClass( Class01.class,             "ann01", "metadata01");
 		getMetadataOnField( Class01.class, "field01",  "ann02", "metadata03");
 		getMetadataOnMethod(Class01.class, "method01", "ann01", "metadata02");
 
