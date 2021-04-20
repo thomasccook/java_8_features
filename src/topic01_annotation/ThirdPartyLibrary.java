@@ -47,8 +47,6 @@ public class ThirdPartyLibrary {
 		getMetadataOnField( Class02.class, "field01",  "ann01", "metadata02");
 		getMetadataOnMethod(Class02.class, "method01", "ann02", "metadata03");
 		
-//getMetadataOnField("scan for classes", "scan for fields", "expected annotation", "expected metadata");
-		
 	}
 
 	/////////////////////////////////////////
