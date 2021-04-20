@@ -1,16 +1,40 @@
 package topic01_annotation;
 
 import java.lang.annotation.Annotation;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 import java.lang.reflect.AnnotatedElement;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-import topic01_annotation.DefineAnnotationsAndClasses.Ann01;
-import topic01_annotation.DefineAnnotationsAndClasses.Ann02;
-import topic01_annotation.DefineAnnotationsAndClasses.Class01;
-import topic01_annotation.DefineAnnotationsAndClasses.Class02;
+import topic01_annotation.MyProgram.Class01;
+import topic01_annotation.MyProgram.Class02;
 
-public class GetDataFromAnnotations { 
+// For Example ... Spring, Hibernate, etc.
+public class ThirdPartyLibrary { 
+	
+	///////////////////////////////
+	// Defining Annotations
+
+	@Target({ ElementType.TYPE, ElementType.FIELD, ElementType.METHOD })
+	@Retention(RetentionPolicy.RUNTIME)
+	public @interface Ann01 {
+		String metadata01() default "www";
+		String metadata02() default "xxx";
+	}
+
+	@Target({ ElementType.TYPE, ElementType.FIELD, ElementType.METHOD })
+	@Retention(RetentionPolicy.RUNTIME)
+	public @interface Ann02 {
+		String metadata03() default "yyy";
+		String metadata04() default "zzz";
+	}	
+	
+	///////////////////////////////
+	// Getting Annotation Metadata	
+	
 	public void process() {
 		
 		// Get Annotation Data off of Class01
@@ -22,6 +46,8 @@ public class GetDataFromAnnotations {
 		getMetadataOnClass( Class02.class,             "ann02", "metadata04");
 		getMetadataOnField( Class02.class, "field01",  "ann01", "metadata02");
 		getMetadataOnMethod(Class02.class, "method01", "ann02", "metadata03");
+		
+//getMetadataOnField("scan for classes", "scan for fields", "expected annotation", "expected metadata");
 		
 	}
 
@@ -53,6 +79,7 @@ public class GetDataFromAnnotations {
 		}
 	}
 	
+	// Use Java Reflection to scan an AnnotatedElement for annotations
 	private String getValue(AnnotatedElement annElement, String annName, String annMetafield) {
 
 		Annotation[] annotations = annElement.getAnnotations();
@@ -85,7 +112,7 @@ public class GetDataFromAnnotations {
 	}
 
 	public static void main(String[] args) throws NoSuchMethodException, SecurityException {
-		(new GetDataFromAnnotations()).process();
+		(new ThirdPartyLibrary()).process();
 	}
 
 }

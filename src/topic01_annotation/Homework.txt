@@ -1,4 +1,5 @@
-Assignment:
-	Create an annotation with an integer value.
-	Create a class where the annotation is attached to the class, fields, and methods.
-	Find all the integer values on all of the annotations and add them together.
+Assignment
+	Create a third party library that defines annotations and scans for annotations. All annotations contain an integer value.
+	Create a MyProgram that uses the annotations.
+	Have the third party library scan MyProgram to get all the integers. 
+	Add all the integers together
