@@ -1,4 +1,4 @@
-package feature06_collection_api_improvements;
+package feature06_collection_api_improvements.homework;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -19,11 +19,9 @@ enum Mode {
 class Params {
 	public static Mode mode = Mode.CUSTOM_THREAD_POOL;
 	
-	public static int[] horseCount = { 100 };
+	public static int[] horseCount = { 50 };
 	// public static int[] horseCount = {50, 100, 150, 200, 250, 300, 350, 400, 450, 500};
 	
-	// Results
-	// https://docs.google.com/spreadsheets/d/1m7wrULmSs3RVI1QZDL00hC9za5X-yGOSgUJkywONup4/edit?usp=sharing
 }
 
 public class Feature06Homework_ThomasCook {
@@ -116,7 +114,7 @@ public class Feature06Homework_ThomasCook {
 	// Custom Lambda Function
 	class Race implements Function<List<Integer>, Integer> {
 		public Integer apply(List<Integer> listHorses) {
-			waitForRaceToFinish();
+			waitForRaceToFinish(); // wait 1-5 seconds
 			int winner = listHorses.stream().max(Integer::compare).get();
 			prn(winner + " ");
 			return winner;
@@ -165,3 +163,6 @@ public class Feature06Homework_ThomasCook {
 	}
 
 }
+
+// Results
+// https://docs.google.com/spreadsheets/d/1m7wrULmSs3RVI1QZDL00hC9za5X-yGOSgUJkywONup4/edit?usp=sharing
