@@ -43,7 +43,7 @@ public class Example {
 		
 		if (false) {
 			prnTitle("forEachKey:");
-			this.chm.forEachKey(2, (key) -> prn(key));
+			this.chm.forEachKey(10, (key) -> prn(key));
 		}
 		
 		if (false) {
@@ -67,7 +67,7 @@ public class Example {
 
 		if (false) {
 			prnTitle("Reduce the HashMap into one String:");
-			String result = chm.reduce(2, (k, v) -> v = v + "   ", (t, v) -> t + v);
+			String result = chm.reduce(1, (k, v) -> v = v + "   ", (t, v) -> t + v);
 			System.out.println(result);
 		}
 

@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Stream;
 
+// For example ... Hibernate, Spring, Jackson, JUnit, etc.
 public class ThirdPartyLibrary { 
 	
 	///////////////////////////////
@@ -55,15 +56,18 @@ public class ThirdPartyLibrary {
 		}
 		return -1;
 	}
-
+	
+	
 	public long processClass(Class clazz) throws Exception {
 		prn("Scanning " + clazz.getName());
 		
 		long sum = 0;		
 		Annotation[] annotations = clazz.getAnnotations();		
-		for (Annotation annotation : annotations) {
-			Summer summer = (Summer) annotation;
-			sum += summer.value();
+		for (Annotation annotation : annotations) {	
+			if (annotation instanceof Summer) {
+				Summer summer = (Summer) annotation;
+				sum += summer.value();				
+			}
 		}		
 		sum += processFields(clazz);
 		sum += processMethods(clazz);
