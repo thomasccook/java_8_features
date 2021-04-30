@@ -6,6 +6,6 @@ Challenge:
 	Thread 1: Writes integers 1-100 to the ConcurrentHashMap. Adds a new integer every second.
 	Thread 2: Prints the current ConcurrentHashMap. Does this every two seconds.
 	Thread 3: Scans the ConcurrentHashMap marking non-primes. Does this every three seconds.
-	Thread 4: Scans the ConcurrentHashMao and removes marked non-primes. Does this every four seconds.
+	Thread 4: Scans the ConcurrentHashMap and removes marked non-primes. Does this every four seconds.
 		
 	In the end, Thread 2 prints all the prime number in order.
