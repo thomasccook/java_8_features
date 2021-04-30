@@ -1,6 +1,6 @@
 Challenge:
 	Create 4 threads that work together to find prime numbers. 
-	All threads write/read/edit/delete to the same ConcurrentHashMao
+	All threads write/read/edit/delete to the same ConcurrentHashMap.
 	Set parallelismThreshold to 1 for all ConcurrentHashMao operations.
 	
 	Thread 1: Writes integers 1-100 to the ConcurrentHashMap. Adds a new integer every second.
