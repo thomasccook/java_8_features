@@ -13,7 +13,7 @@ public class Example {
 	
 	public void process() throws InterruptedException, ExecutionException {
 
-		boolean display = true;
+		boolean display = false;
 		if (display) prnTitle("Put data into HashMap");
 		List<Integer> list = Arrays.asList(new Integer[] { 5, 3, 6, 4, 7, 8, 2, 1, 9, 10 });
 		PutInHashMap putInHashMap = new PutInHashMap(display);
@@ -35,7 +35,7 @@ public class Example {
 		}
 		
 		
-		if (false) {
+		if (true) {
 			prnTitle("forEachEntry:");
 			this.chm.forEachEntry(2, (entry) ->  prn(entry));
 		}
