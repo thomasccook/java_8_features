@@ -30,10 +30,10 @@ public class Challenge {
 	}	
 	
 	public static void main(String[] args) {
-		Example example = new Example();
+		Challenge challenge = new Challenge();
 		try {
 			// blocking call
-			example.process();
+			challenge.process();
 		} catch (ExecutionException | InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

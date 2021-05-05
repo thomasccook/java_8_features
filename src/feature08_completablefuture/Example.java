@@ -83,10 +83,10 @@ public class Example {
 	}	
 	
 	public static void main(String[] args) {
-		Example cfDemo = new Example();
+		Example example = new Example();
 		try {
 			// blocking call
-			cfDemo.process();
+			example.process();
 		} catch (ExecutionException | InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
