@@ -7,7 +7,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Spliterator;
 
-import org.junit.Test;
+//import org.junit.Test;
 
 //Collection API Improvements
 public class Example {
