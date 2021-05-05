@@ -9,8 +9,24 @@ public class Example {
 
 	
 	public void process() throws ExecutionException, InterruptedException {
-				
-		if (true) {
+
+		if (false) {
+			
+			prn("m1");
+			
+			String s1 = "AAA";
+			s1 += "BBB";
+			s1 += "CCC";
+
+			String s2 = "DDD";
+			s2 += "EEE";
+			s2 += "FFF";
+			
+			prn("s1 Returned Value- " + s1);		  
+			prn("s2 Returned Value- " + s2);			
+		}
+		
+		if (false) {
 		
 			prn("m1");
 			
@@ -24,14 +40,11 @@ public class Example {
 					.thenApplyAsync( s -> {pause(1); prn("m6"); return s + "EEE";})
 					.thenApplyAsync( s -> {pause(3); prn("m7"); return s + "FFF";});
 			
-			// CompletableFuture.get() blocks until the CompletableFuture is done
-			prn("cf1 Returned Value- " + cf1.get());		  
-			prn("cf2 Returned Value- " + cf2.get());			
-			
+			prn(cf1.get() + " - " + cf2.get());
 		}
 		
 		
-		if (false) {
+		if (true) {
 			
 			prn("m1");
 			
@@ -47,12 +60,7 @@ public class Example {
 					.thenApplyAsync( s -> {pause(1); prn("m6"); return s + "EEE";}, executor)
 					.thenApplyAsync( s -> {pause(3); prn("m7"); return s + "FFF";}, executor);
 			
-			// CompletableFuture.get() blocks until the CompletableFuture is done
-			prn("cf1 Returned Value- " + cf1.get());		  
-			prn("cf2 Returned Value- " + cf2.get());	
-			
-			executor.shutdown();
-			
+			prn(cf1.get() + " - " + cf2.get());	
 		}		  
 		  
 

@@ -1,2 +1,14 @@
-Challenge:
-	???
+Challenge Part 1:
+	Using CompletableFuture, process data from two different, asynchronous Rest API calls.
+		- Make two API calls (slow them down artificially)
+			- https://jsonplaceholder.typicode.com/todos/1
+			- https://wttr.in/?format=%22%l:+%C+%t%22
+		- In a local function, process data from the two calls together
+Goal - Do all of this in minimum, highly readable code.
+
+
+Challenge Part 2:
+	Using anything other than CompletableFuture, do the same as Part 1.
+
+
+
