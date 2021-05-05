@@ -1,0 +1,8 @@
+Pros:
+	These seem like perfectly reasonable extensions of each API.
+	These are great! We now get lambda expressions without streams. Very nice.
+	
+Cons:
+	Do API's get less powerful as they "sprawl"?
+	
+	

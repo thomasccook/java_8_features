@@ -1,0 +1,25 @@
+Annotations
+
+What:
+	Provide a way to add metadata directly onto Java code (as opposed to external XML files).
+	
+When:
+	Java 1.5
+	
+Why: 
+	Attach metadata to Classes, Fields and Methods (etc.) that can be accessed at runtime (also 
+		before compile-time and during compile-time).
+		
+Notes:
+	Packages affected:
+		java.lang.annotation.Annotation;
+		java.lang.annotation.ElementType;
+		java.lang.annotation.Retention;
+		java.lang.annotation.RetentionPolicy;
+		java.lang.annotation.Target;
+	
+References:
+	https://dzone.com/articles/creating-custom-annotations-in-java
+	https://www.javatpoint.com/java-annotation
+	
+	

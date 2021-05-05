@@ -1,0 +1,10 @@
+Pros:
+	Lambda Expressions allow us to minimize code and make it more compact.
+	Function don't need to be in Classes.
+	Lambda Expressions improve readability when chaining operations.
+	
+Cons:
+	Once again, Java is becoming less and less Object Oriented.
+	There are too many ways to define interfaces (StringIn_StringOut, T1In_T2Out<T1, T2>, BinaryOperator, more) that feel unrelated.
+	
+	
