@@ -4,12 +4,11 @@ Challenge Part 1:
 			- https://jsonplaceholder.typicode.com/todos/1
 			- https://wttr.in/?format=%22%l:+%C+%t%22
 		- In a local function, process data from the two calls together
-Goal - Do all of this in minimum, highly readable code.
-
 
 Challenge Part 2:
 	Using anything other than CompletableFuture, do the same as Part 1.
 
 
+Do all of this in minimum, highly readable code.
 
 Purpose: Compare and Contrast CompletableFuture to another multi-threaded, RestAPI calling technique.
