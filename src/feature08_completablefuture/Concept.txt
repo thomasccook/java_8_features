@@ -21,5 +21,6 @@ Notes:
 References:
 	https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html
 	https://knpcode.com/java/concurrency/java-completablefuture-with-examples/
+	https://dzone.com/articles/20-examples-of-using-javas-completablefuture
 	
 	
