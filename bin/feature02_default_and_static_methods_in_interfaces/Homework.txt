@@ -1,2 +1,0 @@
-Try to find a real-world use for Interfaces with variables, default methods, and static methods.
-Present next week.

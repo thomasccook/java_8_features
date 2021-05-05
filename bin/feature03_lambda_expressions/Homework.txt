@@ -1,6 +1,0 @@
-Create a function
-
-	String String fxn (Integer n, Double d)
-	
-And research on the internet how many ways there are to define this as a Lambda Expression.
-

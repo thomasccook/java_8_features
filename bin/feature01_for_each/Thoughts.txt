@@ -1,8 +1,0 @@
-Pros:
-	If possible, resuable business logic using 'forEach' and a 'Consumer' is a good idea for consistency and convenience.
-
-
-Cons:
-	Although two loops may be similar, but they are seldom identical, so reusing a non-trivial Consumer may be rare.
-	There are many ways to use 'forEach', which makes usage hard to remember.
-	Without 'break', 'continue' or an intuitive 'return', the old loops may be better tools.

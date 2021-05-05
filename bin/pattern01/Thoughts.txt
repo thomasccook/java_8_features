@@ -1,8 +1,0 @@
-Pros:
-	Inheritance is a very intuitive.
-	Composition is very flexible.
-
-
-Cons:
-	Inheritance probably does not match the real world very well (https://www.youtube.com/watch?v=BQZKs75RMqM).
-	Composition lacks an appealing structure.

@@ -1,6 +1,0 @@
-Assignment
-	Create a third party library that defines annotations and scans for annotations. 
-			All annotations contain an integer value.
-	Create a MyProgram that uses the annotations.
-	Have the third party library scan MyProgram to get all the integers. 
-	Add all the integers together
