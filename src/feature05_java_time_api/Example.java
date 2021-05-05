@@ -19,8 +19,6 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
 
-import org.junit.Test;
-
 public class Example {
 
 			
