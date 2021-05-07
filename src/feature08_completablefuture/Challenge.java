@@ -104,68 +104,68 @@ public class Challenge {
 	////////////////////////////////////////////////////////
 	// Support
 	
-	private String getRemoteData(String url, int id,  String field) {
+	private String getRemoteData(String url, int id, String field) {
 		String urlAndParameters = url + id;
 		try {
 			String json = this.makeCall(urlAndParameters);
 			Map<String, String> map = parseJSON(json);
-			return map.get(field);			
+			return map.get(field);
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.exit(0);
 		}
 		return null;
 	}
-	
+
 	// https://stackoverflow.com/questions/1359689/how-to-send-http-request-in-java
 	private String makeCall(String url) throws Exception {
 		StringBuilder sb = new StringBuilder();
-		
-        URL yahoo = new URL(url);
-        URLConnection yc = yahoo.openConnection();
-        BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
-        String inputLine;
-        while ((inputLine = in.readLine()) != null) {
-        	sb.append(inputLine + "\n");
-        }
-        in.close();
-                
-        return sb.toString();
+
+		URL yahoo = new URL(url);
+		URLConnection yc = yahoo.openConnection();
+		BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
+		String inputLine;
+		while ((inputLine = in.readLine()) != null) {
+			sb.append(inputLine + "\n");
+		}
+		in.close();
+
+		return sb.toString();
 	}
-	
+
 	// https://stackoverflow.com/questions/443499/convert-json-to-map
-    public static Map<String, String> parseJSON(String json) throws ScriptException {
-        ScriptEngineManager sem = new ScriptEngineManager();
-        ScriptEngine engine = sem.getEngineByName("javascript");
-        String script = "Java.asJSONCompatible(" + json + ")";
-        Object result = engine.eval(script);
-        return (Map) result;
-    }
-	
+	public static Map<String, String> parseJSON(String json) throws ScriptException {
+		ScriptEngineManager sem = new ScriptEngineManager();
+		ScriptEngine engine = sem.getEngineByName("javascript");
+		String script = "Java.asJSONCompatible(" + json + ")";
+		Object result = engine.eval(script);
+		return (Map) result;
+	}
+
 	private synchronized static void prn(Object obj) {
 		System.out.print(obj);
 		System.out.print(" ... ");
 		System.out.print(Thread.currentThread().getName());
 		System.out.println();
-	}	
-	
+	}
+
 	private void pause(double min, double max) {
 		try {
-			long seconds = (long)(min + (max - min) * Math.random());
+			long seconds = (long) (min + (max - min) * Math.random());
 			Thread.currentThread().sleep(seconds * 1000);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}	
-	
+	}
+
 	public static void main(String[] args) {
 		Challenge challenge = new Challenge();
 		try {
-			//challenge.useCompletableFuture();
+			// challenge.useCompletableFuture();
 			challenge.useConcurrentHashmap();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}	
+	}
 
 }
