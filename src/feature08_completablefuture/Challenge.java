@@ -23,7 +23,6 @@ public class Challenge {
 	// Use Completable Future
 	
 	public void useCompletableFuture() throws Exception {
-	 
 		System.out.println("****** Get Title List - Use CompletableFuture ******");
 	
 		prn("Queue'ing");
@@ -61,7 +60,6 @@ public class Challenge {
 	ConcurrentHashMap<String, String> chm = new ConcurrentHashMap<String, String> ();
 	
 	public void useConcurrentHashmap() throws Exception {
-		 
 		System.out.println("****** Get Title List - Use java.lang.Thread and ConcurrentHashMap ******");
 		
 		prn ("Launching Threads");
@@ -84,7 +82,6 @@ public class Challenge {
 	}
 	
 	class CallThread extends Thread {
-
 		private String url;
 		private int id;
 		private String field;
@@ -108,7 +105,6 @@ public class Challenge {
 	// Support
 	
 	private String getRemoteData(String url, int id,  String field) {
-		
 		String urlAndParameters = url + id;
 		try {
 			String json = this.makeCall(urlAndParameters);
@@ -123,14 +119,12 @@ public class Challenge {
 	
 	// https://stackoverflow.com/questions/1359689/how-to-send-http-request-in-java
 	private String makeCall(String url) throws Exception {
-		
 		StringBuilder sb = new StringBuilder();
 		
         URL yahoo = new URL(url);
         URLConnection yc = yahoo.openConnection();
         BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
         String inputLine;
-
         while ((inputLine = in.readLine()) != null) {
         	sb.append(inputLine + "\n");
         }
