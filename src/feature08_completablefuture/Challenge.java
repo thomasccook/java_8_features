@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Collectors;
 
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
@@ -28,7 +29,7 @@ public class Challenge {
 		prn("Queue'ing");
 		List<CompletableFuture<String>> listCf = new ArrayList<CompletableFuture<String>>();
 		for (int id=1; id <= CALL_COUNT; id++) {
-			CompletableFuture<String> cf = getCompletableFuture(URL, id, "title");
+			CompletableFuture<String> cf = getCompletableFuture(URL, id);
 			listCf.add(cf);
 		}
 		
@@ -46,11 +47,12 @@ public class Challenge {
 		listTitle.stream().sorted().forEach(System.out::println);
 	}
 
-	public CompletableFuture<String> getCompletableFuture(String url, int id, String field) throws Exception {				
+	public CompletableFuture<String> getCompletableFuture(String url, int id) throws Exception {				
 		return CompletableFuture
-				.supplyAsync(   () -> { pause(3, 10);  return null;})
-				.thenApplyAsync( s -> { prn("Requesting #" + id); return null;})
-				.thenApplyAsync( s -> { return getRemoteData(url, id,  field);});										
+				.supplyAsync(   () -> getRemoteData(url, id,  "id"))
+				.thenApplyAsync( s -> s + " : " + getRemoteData(url, id, "userId"))
+				.thenApplyAsync( s -> s + " : " + getRemoteData(url, id,  "completed"))
+				.thenApplyAsync( s -> s + " : " + getRemoteData(url, id,  "title"));
 	}
 	
 	
@@ -64,7 +66,7 @@ public class Challenge {
 		
 		prn ("Launching Threads");
 		for (int id=1; id <= CALL_COUNT; id++) {
-			(new CallThread(URL, id, "title")).start();
+			(new CallThread(URL, id)).start();
 		}
 		
 		prn("Waiting");
@@ -84,19 +86,19 @@ public class Challenge {
 	class CallThread extends Thread {
 		private String url;
 		private int id;
-		private String field;
 		
-		public CallThread(String url, int id, String field) {
+		public CallThread(String url, int id) {
 			this.url = url;
 			this.id = id;
-			this.field = field;
 		}
 		
 		public void run() {
-			pause(3, 10);
-			prn("Requesting #" + id);
-			String title = getRemoteData(url, id,  field);
-			chm.put(title, title);
+			String str = "";
+			str = getRemoteData(url, id,  "id");
+			str = str + " : " + getRemoteData(url, id,  "userId");
+			str = str + " : " + getRemoteData(url, id,  "completed");
+			str = str + " : " + getRemoteData(url, id,  "title");
+			chm.put(str,  str);
 		}
 	}
 	
@@ -107,6 +109,8 @@ public class Challenge {
 	private String getRemoteData(String url, int id, String field) {
 		String urlAndParameters = url + id;
 		try {
+			pause(1,3);
+			prn("Requesting #" + id + "." + field);
 			String json = this.makeCall(urlAndParameters);
 			Map<String, String> map = parseJSON(json);
 			return map.get(field);
@@ -138,8 +142,13 @@ public class Challenge {
 		ScriptEngineManager sem = new ScriptEngineManager();
 		ScriptEngine engine = sem.getEngineByName("javascript");
 		String script = "Java.asJSONCompatible(" + json + ")";
-		Object result = engine.eval(script);
-		return (Map) result;
+		Map<String, Object> result = (Map)engine.eval(script);
+		
+		Map<String, String> map = result.entrySet().stream().collect(Collectors.toMap(
+	            e -> e.getKey(),
+	            e -> {return "" + e.getValue();}));
+		
+		return map;
 	}
 
 	private synchronized static void prn(Object obj) {
