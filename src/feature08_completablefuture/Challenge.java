@@ -161,8 +161,8 @@ public class Challenge {
 	public static void main(String[] args) {
 		Challenge challenge = new Challenge();
 		try {
-			// challenge.useCompletableFuture();
-			challenge.useConcurrentHashmap();
+			challenge.useCompletableFuture();
+			//challenge.useConcurrentHashmap();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
