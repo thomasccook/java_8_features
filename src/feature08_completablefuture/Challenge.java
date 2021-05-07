@@ -5,7 +5,6 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
@@ -23,12 +22,11 @@ public class Challenge {
 	////////////////////////////////////////////////////////
 	// Use Completable Future
 	
-	
 	public void useCompletableFuture() throws Exception {
 	 
 		System.out.println("****** Get Title List - Use CompletableFuture ******");
 	
-		prn ("Queue'ing");
+		prn("Queue'ing");
 		List<CompletableFuture<String>> listCf = new ArrayList<CompletableFuture<String>>();
 		for (int id=1; id <= CALL_COUNT; id++) {
 			CompletableFuture<String> cf = getCompletableFuture(URL, id, "title");
@@ -47,12 +45,11 @@ public class Challenge {
 		
 		prn("\nTitle List:");
 		listTitle.stream().sorted().forEach(System.out::println);
-		
 	}
 
 	public CompletableFuture<String> getCompletableFuture(String url, int id, String field) throws Exception {				
 		return CompletableFuture
-				.supplyAsync(   () -> { pause((long) (3 + (7 * Math.random())));  return null;})
+				.supplyAsync(   () -> { pause(3, 10);  return null;})
 				.thenApplyAsync( s -> { prn("Requesting #" + id); return null;})
 				.thenApplyAsync( s -> { return getRemoteData(url, id,  field);});										
 	}
@@ -62,7 +59,6 @@ public class Challenge {
 	// java.lang.Thread and ConcurrentHashMap
 	
 	ConcurrentHashMap<String, String> chm = new ConcurrentHashMap<String, String> ();
-	
 	
 	public void useConcurrentHashmap() throws Exception {
 		 
@@ -80,16 +76,13 @@ public class Challenge {
 				prn("Received " + chm.size() + " records.");
 				previousSize = chm.size();
 			} 
-			pause(1);
+			pause(1, 1);
 		}
 		
 		prn("\nTitle List:");
 		chm.keySet().stream().sorted().forEach(System.out::println);
-		
-		
 	}
 	
-	// Insert a new number every 1 seconds.
 	class CallThread extends Thread {
 
 		private String url;
@@ -103,7 +96,7 @@ public class Challenge {
 		}
 		
 		public void run() {
-			pause((long) (3 + (7 * Math.random())));
+			pause(3, 10);
 			prn("Calling #" + id);
 			String title = getRemoteData(url, id,  field);
 			chm.put(title, title);
@@ -114,7 +107,6 @@ public class Challenge {
 	////////////////////////////////////////////////////////
 	// Support
 	
-	// Each call takes 3-10 seconds
 	private String getRemoteData(String url, int id,  String field) {
 		
 		String urlAndParameters = url + id;
@@ -127,7 +119,6 @@ public class Challenge {
 			System.exit(0);
 		}
 		return null;
-
 	}
 	
 	// https://stackoverflow.com/questions/1359689/how-to-send-http-request-in-java
@@ -164,8 +155,9 @@ public class Challenge {
 		System.out.println();
 	}	
 	
-	private void pause(long seconds) {
+	private void pause(double min, double max) {
 		try {
+			long seconds = (long)(min + (max - min) * Math.random());
 			Thread.currentThread().sleep(seconds * 1000);
 		} catch (Exception e) {
 			e.printStackTrace();
