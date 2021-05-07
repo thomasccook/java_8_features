@@ -97,7 +97,7 @@ public class Challenge {
 		
 		public void run() {
 			pause(3, 10);
-			prn("Calling #" + id);
+			prn("Requesting #" + id);
 			String title = getRemoteData(url, id,  field);
 			chm.put(title, title);
 		}
@@ -167,8 +167,8 @@ public class Challenge {
 	public static void main(String[] args) {
 		Challenge challenge = new Challenge();
 		try {
-			challenge.useCompletableFuture();
-			//challenge.useConcurrentHashmap();
+			//challenge.useCompletableFuture();
+			challenge.useConcurrentHashmap();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
