@@ -1,0 +1,41 @@
+Executors.newWorkStealingPool(...) 
+
+What:
+	Adds a work-stealing thread pool using all available processors as its target parallelism level.
+		
+When:
+	Concurrency was introduced with Java 5. The Executor interface provided a replacement to the original: new Thread(r).start().
+	In Java 8, a new type of Concurrency thread pool is introduced as newWorkStealingPool() to complement the 
+		existing ones (newCachedThreadPool(), newFixedThreadPool(int nThreads), newSingleThreadExecutor(), newScheduledThreadPool(int corePoolSize), etc.)
+	
+Why: 
+	If one thread has finished its work and has nothing more to do, it can “steal” the work from the other thread’s queue.
+	But this work-stealing mechanism is already used by ForkJoinPool in Java
+	However, this is just a wrapper around ForkJoinPool.
+	
+			public static ExecutorService newWorkStealingPool() {
+			    return new ForkJoinPool(Runtime.getRuntime().availableProcessors(),
+			                                                 ForkJoinPool.defaultForkJoinWorkerThreadFactory,
+			                                                 null, true);
+			}	
+	
+		
+Notes:
+	Packages affected:
+		import java.util.concurrent.ConcurrentHashMap;
+		import java.util.concurrent.ExecutorService;
+		import java.util.concurrent.Executors; 
+		
+Comment:
+	Executors.newWorkStealingPool() acts totally different than the other functions (newCachedThreadPool(), newFixedThreadPool(), 
+			newSingleThreadExecutor(), newScheduledThreadPool()) making this a confusing addition to the API.
+		
+		
+	
+References:
+	https://dzone.com/articles/diving-into-java-8s-newworkstealingpools
+	https://www.programmersought.com/article/80825646154/
+	https://www.tutorialspoint.com/java_concurrency/concurrency_newcachedthreadpool.htm
+	https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html
+	
+	
